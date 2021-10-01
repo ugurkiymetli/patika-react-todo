@@ -1,0 +1,25 @@
+.App {
+  text-align: center;
+}
+ul,
+li {
+  margin: 5px 0;
+  padding: 5px 0;
+  list-style-type: none;
+}
+
+.filters {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  right: 0;
+  left: 0;
+}
+
+.filters li {
+  display: inline;
+}
+button {
+  margin: 5px;
+}
