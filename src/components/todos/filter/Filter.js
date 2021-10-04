@@ -1,10 +1,10 @@
 import React from "react";
 
-function Filter() {
+function Filter({ todos }) {
   return (
     <div id="filter">
       <span>
-        <strong>4 </strong>
+        <strong>{todos.length} </strong>
         items left
       </span>
       <br />

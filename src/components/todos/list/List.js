@@ -1,25 +1,17 @@
 import React from "react";
 
-function List() {
+function List({ todos }) {
+  console.log("list compoonent - ", todos);
   return (
     <div id="list">
+      liste component
       <ul>
-        <li>
-          <input type="checkbox" />
-          Todo #1
-        </li>
-        <li>
-          <input type="checkbox" />
-          Todo #2
-        </li>
-        <li>
-          <input type="checkbox" />
-          Todo #3
-        </li>
-        <li>
-          <input type="checkbox" />
-          Todo #4
-        </li>
+        {todos.map((item, index) => (
+          <li key={index}>
+            <input type="checkbox" />
+            {item.content}
+          </li>
+        ))}
       </ul>
     </div>
   );
