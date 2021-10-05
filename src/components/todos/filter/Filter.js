@@ -1,6 +1,6 @@
 import React from "react";
 
-function Filter({ todos }) {
+function Filter({ /* filterActive, filterCompleted, filterAll, */ todos }) {
   return (
     <div id="filter">
       <span>
@@ -8,9 +8,13 @@ function Filter({ todos }) {
         items left
       </span>
       <br />
+      {/* <button onClick={filterAll}>All</button>
+      <button onClick={filterActive}>Active </button>
+      <button onClick={filterCompleted}>Completed</button> */}
       <button>All</button>
-      <button>Active</button>
+      <button>Active </button>
       <button>Completed</button>
+
       <button>Clear completed</button>
     </div>
   );

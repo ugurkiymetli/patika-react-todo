@@ -1,15 +1,28 @@
 import React from "react";
 
-function List({ todos }) {
-  console.log("list compoonent - ", todos);
+function List({ markTodo, removeTodo, todos }) {
+  // console.log("list compoonent - ", todos);
   return (
     <div id="list">
       liste component
       <ul>
         {todos.map((item, index) => (
-          <li key={index}>
-            <input type="checkbox" />
+          <li
+            key={index}
+            style={{ textDecoration: item.isDone ? "line-through" : "" }}
+          >
+            <input
+              type="checkbox"
+              checked={item.isDone ? true : false}
+              onChange={() => markTodo(index)}
+            />
             {item.content}
+            <button
+              style={{ alignItems: "flex-end" }}
+              onClick={() => removeTodo(index)}
+            >
+              SİL X
+            </button>
           </li>
         ))}
       </ul>

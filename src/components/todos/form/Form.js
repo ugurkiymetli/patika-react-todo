@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function Form({ addTodo, todos }) {
-  const [form, setForm] = useState({ content: "", done: false });
+  const [form, setForm] = useState({ content: "", isDone: false });
   const onSubmit = (e) => {
     e.preventDefault();
     if (form.content === "") {
@@ -9,6 +9,8 @@ function Form({ addTodo, todos }) {
       return false;
     }
     addTodo([...todos, form]);
+    //form inputunu temizlemek için.
+    setForm({ content: "" });
   };
   const onFormChange = (e) => {
     setForm({ ...form, content: e.target.value });
